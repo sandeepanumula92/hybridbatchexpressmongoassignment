@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Movies To Watch Before Die</title>
+           <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en">
+      			 <link href="css/bootstrap.min.css" rel="stylesheet">
+    		 		 <link href="css/style.css" rel="stylesheet">
+		    </head>
+    <body>
+			<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<img src="images/cinema.jpg" alt="cinema" align="left" height="30" width="120" class="img-responsive">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><h4>Home</h4></a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#"><h4>TV Shows</h4></a>
+						</li>
+						<li>
+							<a href="#"><h4>Movies</h4></a>
+						</li>
+            <li class="">
+        <a class="btn" id="addMovie" type="button" data-toggle="modal" data-target="#myModalHorizontal"><h4>Add Movie</h4></a>
+      </li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><h4>More<strong class="caret"></strong></h4></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#"><h4>Sports</h4></a>
+								</li>
+								<li>
+									<a href="#"><h4>Events</h4></a>
+								</li>
+								<li>
+									<a href="#"><h4>Plays</h4></a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#"><h4>Cricket</h4></a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#"><h4>Trailer & Videos</h4></a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					</div>
+			</nav>
+
+			<div class="carousel slide" id="carousel">
+							<ol class="carousel-indicators">
+								<li class="active" data-slide-to="0" data-target="#carousel"></li>
+								<li data-slide-to="1" data-target="#carousel"></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="item active" id="slide1">
+																</div>
+								<div class="item" id="slide2">
+													</div>
+                        <div class="item" id="slide3">
+                        </div>
+							</div>
+							</div> <a class="left carousel-control" href="#carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+
+
+	<div id="movies"></div>
+
+
+  <div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close"
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    New Movie
+                </h4>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+
+                <form class="form-horizontal" role="form"  method="post">
+                  <div class="form-group">
+                    <label  class="col-sm-4 control-label"
+                              for="inputEmail3">Movie Name</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="title"
+                        id="title" placeholder="Movie"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label"
+                          for="inputYear" >Year</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="year"
+                            id="year" placeholder="YYYY"/>
+                    </div>
+                  </div>
+									<div class="form-group">
+										<label  class="col-sm-4 control-label"
+															for="inputEmail3">Actors</label>
+										<div class="col-sm-6">
+												<input type="text" class="form-control" name="actors"
+												id="actors" placeholder="Actors"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label  class="col-sm-4 control-label"
+															for="inputEmail3">Director</label>
+										<div class="col-sm-6">
+												<input type="text" class="form-control" name="director"
+												id="director" placeholder="Director"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label  class="col-sm-4 control-label"
+															for="inputEmail3">Description</label>
+										<div class="col-sm-6">
+                      <textarea rows="3" cols="35" id="plot" name="plot" placeholder="Short Description">
+
+                      </textarea>
+
+										</div>
+									</div>
+									<div class="form-group">
+										<label  class="col-sm-4 control-label"
+															for="inputEmail3">Language</label>
+										<div class="col-sm-6">
+												<input type="text" class="form-control" name="language"
+												id="language" placeholder="Language"/>
+										</div>
+									</div>
+                  <div class="form-group">
+                    <label  class="col-sm-4 control-label"
+                              for="inputEmail3">Country </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="country"
+                        id="country" placeholder="Country"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label  class="col-sm-4 control-label"
+                              for="inputEmail3">Release Date</label>
+                    <div class="col-sm-6">
+  												<input type="date" class="form-control" name="released"
+  												id="released" placeholder="Release Date"/>
+  										</div>
+                  </div>
+									<div class="form-group">
+										<label  class="col-sm-4 control-label"
+															for="inputEmail3">Rating</label>
+										<div class="col-sm-6">
+												<input type="text" class="form-control" name="imdbRating"
+												id="imdbRating" placeholder="Rating"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label  class="col-sm-4 control-label"
+															for="inputEmail3">Awards</label>
+										<div class="col-sm-6">
+												<input type="text" class="form-control" name="awards"
+												id="awards" placeholder="Awards"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label  class="col-sm-4 control-label"
+															for="inputEmail3">Image</label>
+										<div class="col-sm-6">
+												<input type="file" class="form-control" name="poster" 
+												id="poster" placeholder="Poster link"/>
+                      			</div>
+									</div>
+
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-8">
+                      <button type="submit" class="btn btn-success pull-right" id="update"  formaction="update_details">Update</button>
+                      <button type="submit" class="btn btn-success pull-right " id="add" formaction="add_details">Add</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+        </div>
+    </div>
+</div>
+
+<!--delete alert start-->
+<div class="modal fade " id="myModalDeleteAlert">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Alert</h4>
+
+                        </div><!-- end modal-header -->
+                        <div class="modal-body">
+                          <form class="form-horizontal" method="post">
+                              <input type="hidden" id="titleDelete" name="titleDelete" ></input>
+
+                            <div class="form-group">
+
+                              <div class="col-sm-12">
+                                <label>Are you sure want to delete?</label>
+                              </div>
+                            </div>
+
+                        <div class="form-group">
+                          <div class="col-sm-offset-2 col-sm-8">
+                            <button class="btn btn-default pull-right active" data-dismiss="modal" type="button">Cancel</button>
+                            <button class="btn btn-primary pull-right" type="submit" formaction="deleteMovie">OK</button>
+                          </div>
+                        </div>
+                        </div><!-- end modal-body -->
+                          </form>
+                      </div><!-- end modal-content -->
+                    </div><!-- end modal-dialog -->
+                  </div><!-- end myModal -->
+<!--delete alert end-->
+
+		<div class="panel-footer">
+				<div class="col-md-6">
+					<h4>Copyright &copy; 2016</h4></div>
+					</div>
+					<div class="col-md-6">
+		          <h4>Follow Us</h4>
+		          <ul class="unstyled">
+		            <li><a href="#">Twitter</a></li>
+		            <li><a href="#">Facebook</a></li>
+		            <li><a href="#">Google Plus</a></li>
+		          </ul>
+		        </div>
+					</div>
+
+	 <script src="js/jquery.min.js"></script>
+	 <script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+
+</body>
+</html>
